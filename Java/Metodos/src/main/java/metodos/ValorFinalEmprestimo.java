@@ -10,12 +10,15 @@ public class ValorFinalEmprestimo {
 		System.out.println("Infoorme o número desejado de parcelas: ");
 		Integer numParcelas = Integer.parseInt(teclado.nextLine());
 		teclado.close();
-		System.out.println(ValorFinalEmprestimo.valorFinal(valor, numParcelas));
+		Double valorFinal = ValorFinalEmprestimo.valorFinal(valor, numParcelas);
+		if (valorFinal>0.0)
+			System.out.println(String.format("O valor final do empréstimo é de R$%,.2f", valorFinal));
+		else
+			System.out.println("FAIXA DE VALOR OU NÚMERO DE PARCELAS INCOMPATÍVEL");
 	}
 	
 	
-	public static String valorFinal(Double valor, Integer numParcelas) {
-		Double valorTotal=0.0;
+	public static Double valorFinal(Double valor, Integer numParcelas) {
 		int a = 1;
 		Double valorJuros;
 		if (valor >0.1 && valor <1000.00 && numParcelas<=12) {
@@ -23,30 +26,27 @@ public class ValorFinalEmprestimo {
 				valorJuros = valor * 0.02;
 				valor = valor + valorJuros;
 				a++;
-				valorTotal = valor;
 			}
-			return String.format("O valor final do empréstimo é de R$%,.2f", valorTotal);
+			return (double) Math.round(valor * 100.0)/100.0;
 		}
 		if (valor >=1000 && valor <5000.00 && numParcelas<=24) {
 			while (a<=numParcelas) {
 				valorJuros = valor * 0.015;
 				valor = valor + valorJuros;
 				a++;
-				valorTotal = valor;
 			}
-			return String.format("O valor final do empréstimo é de R$%,.2f", valorTotal);
+			return (double) Math.round(valor * 100.0)/100.0;
 		}
 		if (valor >=5000 && valor <=10000.00 && numParcelas<=36) {
 			while (a<=numParcelas) {
 				valorJuros = valor * 0.012;
 				valor = valor + valorJuros;
 				a++;
-				valorTotal = valor;
 			}
-			return String.format("O valor final do empréstimo é de R$%,.2f", valorTotal);
+			return (double) Math.round(valor * 100.0)/100.0;
 		}
 		else {
-			return "FAIXA DE VALOR OU NÚMERO DE PARCELAS INCOMPATÍVEL";
+			return 0.0;
 		}
 	}
 }
