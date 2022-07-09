@@ -50,7 +50,8 @@ public class AulaList {
 																// se não passar o parâmetro D, ele interpreta como
 																// inteiro e remove pelo índice.
 		System.out.println(notas);
-
+		Collections.shuffle(notas);	//Método para alterar a ordem aleatóriamente de uma lista.
+		System.out.println(notas);
 	}
 
 }
