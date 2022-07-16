@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class AulaMap {
 	public static void main(String[] args) {
-		Map<String, Double> carrosPopulares = new HashMap<>();
+		Map<String, Double> carrosPopulares = new HashMap();
 		carrosPopulares.put("Gol", 14.4);
 		carrosPopulares.put("Uno", 15.6);
 		carrosPopulares.put("Mobi", 16.1);

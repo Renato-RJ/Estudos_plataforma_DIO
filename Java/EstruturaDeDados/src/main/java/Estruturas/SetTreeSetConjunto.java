@@ -17,7 +17,7 @@ public class SetTreeSetConjunto {
 //		System.out.println(hashSetCarros);							//Os objetos de um Set não obdecem a ordem de inserção dos mesmos, ordem aleatória.
 //
 		
-		NavigableSet<Carro> treeSetCarros = new TreeSet<>();		//Para fazer o uso do treeSet, é necessário implementar a classe comparable na classe de modelo.
+		NavigableSet<Carro> treeSetCarros = new TreeSet();		//Para fazer o uso do treeSet, é necessário implementar a classe comparable na classe de modelo.
 		treeSetCarros.add(new Carro("Ford"));
 		treeSetCarros.add(new Carro("Chevrolet"));
 		treeSetCarros.add(new Carro("Fiat"));

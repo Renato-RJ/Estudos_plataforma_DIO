@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class StackPilha {
 	public static void main(String[] args) {
-		Stack<Carro> stackCarros = new Stack<>();
+		Stack<Carro> stackCarros = new Stack();
 		stackCarros.push(new Carro("Ford"));
 		stackCarros.push(new Carro("Chevrolet"));		//Em pilhas, adicionamos os objetos através do push.
 		stackCarros.push(new Carro("Fiat"));

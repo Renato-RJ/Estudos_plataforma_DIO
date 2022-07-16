@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class QueueFila {
 	public static void main(String[] args) {
-	Queue<Carro> filaCarros = new LinkedList<>();
+	Queue<Carro> filaCarros = new LinkedList();
 	filaCarros.add(new Carro("Ford"));
 	filaCarros.add(new Carro("Chevrolet"));		//Método add adiciona itens a fila.
 	filaCarros.add(new Carro("Fiat"));

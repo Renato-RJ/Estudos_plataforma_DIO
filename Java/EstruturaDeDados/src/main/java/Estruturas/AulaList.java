@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class AulaList {
 	public static void main(String[] args) {
-		List<Double> notas = new ArrayList<>();
+		List<Double> notas = new ArrayList();
 		Scanner teclado = new Scanner(System.in);
 
 		System.out.println("Informe as notas a seguir: ");
